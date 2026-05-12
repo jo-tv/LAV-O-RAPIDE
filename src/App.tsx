@@ -601,12 +601,35 @@ export default function App() {
                   </div>
                 ))}
               </div>
+              <a
+                  href="https://maps.app.goo.gl/WjqrEv7Jf4b5GgEw9"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-info mt-3"
+                >
+                  📍 فتح الموقع على Google Maps
+              </a>
+              <div className="map-container mt-4">
+                <iframe
+                  title="Location Map"
+                  src="https://www.google.com/maps?q=35.774485,-5.782388&z=17&output=embed"
+                  width="100%"
+                  height="300"
+                  style={{
+                    border: 0,
+                    borderRadius: '20px',
+                  }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
 
               {/* Working hours */}
               <div className="contact-info-card">
                 <h5 className="text-white fw-bold mb-3">🕐 ساعات العمل</h5>
                 {[
-                  { day: 'الإثنين - الأحد', time: '8:00 ص - 19:00 م' },
+                  { day: 'الإثنين - الأحد', time: '9:00 ص - 19:00 م' },
 //                   { day: 'الجمعة', time: '2:00 م - 10:00 م' },
                 ].map((h, i) => (
                   <div key={i} className="d-flex justify-content-between align-items-center py-2">
@@ -616,6 +639,7 @@ export default function App() {
                     </span>
                   </div>
                 ))}
+                
                 <div className="mt-3 pt-3 border-top" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
                   <span style={{ color: '#25d366', fontSize: '0.85rem', fontWeight: 600 }}>
                     <span className="d-inline-block rounded-circle me-2" style={{ width: 8, height: 8, background: '#25d366', animation: 'pulse 2s infinite' }}></span>
